@@ -33,11 +33,32 @@ body{
 
 @keyframes flip {
     from {
-        transform-origin: 0;
+        transform-origin: 0 100%;
     }
     to {
-        transform: rotatex(180deg);
+        transform: rotateX(160deg);
         transform-origin: 0 100%;
+        margin-right: 0;
+    }
+}
+
+.flip-closed {
+    animation-name: close;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes close {
+    from {
+        transform: rotateX(160deg);
+        transform-origin: 0 100%;
+        margin-right: 0;
+    }
+    to {
+        transform: rotateX(0deg);
+        transform-origin: 0 100%;
+        margin-right: 50px;
     }
 }
 
@@ -45,4 +66,13 @@ body{
     width: 800px;
     height: 625px;
     background-color: rgb(196, 191, 121);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.close {
+    background-color: antiquewhite;
+    width: 200px;
 }
