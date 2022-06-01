@@ -3,6 +3,7 @@ body{
     align-items: center;
     justify-self: center;
     flex-direction: column;
+    background-color: rgb(180, 255, 177);
 }
 
 .tab {
