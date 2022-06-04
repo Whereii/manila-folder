@@ -63,6 +63,38 @@ body{
     }
 }
 
+.bring-forward {
+    animation-name: closeup;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes closeup {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.4);
+    }
+}
+
+.send-back {
+    animation-name: send-back;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes send-back {
+    from {
+        transform: scale(1.4);
+    }
+    to {
+        transform: 1;
+    }
+}
+
+
+
 .back-folder {
     width: 800px;
     height: 625px;
