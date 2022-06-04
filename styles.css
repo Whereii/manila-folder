@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body{
     display: flex;
     align-items: center;
@@ -5,6 +10,7 @@ body{
     flex-direction: column;
     background-color: rgb(180, 255, 177);
 }
+
 
 .tab {
     width: 200px;
@@ -14,6 +20,10 @@ body{
     border-top-right-radius: 10%;
     margin-right: 600px;
     margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .front-folder{
@@ -103,9 +113,67 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .close {
-    background-color: antiquewhite;
     width: 200px;
+    margin-left: 100px;
+    opacity: 0;
+}
+
+.btn-appear {
+    animation-name: btn-appear;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+.btn-fade {
+    animation-name: btn-fade;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn-fade {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%
+    }
+}
+
+
+
+.personal-info,
+.contact,
+.projects {
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    position: absolute;
+    z-index: -.5;
+    box-shadow: 5px 5px rgb(184, 181, 181);
+    border: 1px solid grey;
+    
+}
+.contact {
+    margin-top: 100px;
+    margin-right: 50px;
+}
+.projects {
+    margin-bottom: 100px;
+    margin-left: 50px;
 }
